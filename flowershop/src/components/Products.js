@@ -4,7 +4,18 @@ import '../assets/CSS/layout.css';
 
 
 export default function Products(){
-   
+    const [cartItems, setCartItems] = useState([]);
+    const addToCart = (flower, quantity) => {
+        const itemIndex = cartItems.findIndex(item => item.id === flower.id);
+        const updatedCart = [...cartItems];
+    
+        if (itemIndex > -1) {
+          updatedCart[itemIndex].qty += quantity;
+        } else {
+          updatedCart.push({ ...flower, qty: quantity });
+        }
+        setCartItems(updatedCart);
+      };
     return(
         <>
             <div className="item1">
@@ -32,7 +43,7 @@ export default function Products(){
             </div>
             <div className="item3">
                 {
-                //cart
+                <Cart cartItems={cartItems} />
                 }
             </div>
         </>
