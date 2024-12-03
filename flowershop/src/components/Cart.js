@@ -1,4 +1,5 @@
-import '../assets/css/layout.css';
+import React from 'react';
+import '../assets/CSS/layout.css'; 
 
 export default function Cart({ cartItems = [] }) {
   const calculateTotal = () => {
@@ -21,12 +22,12 @@ export default function Cart({ cartItems = [] }) {
             <tr key={item.id}>
               <td>{item.name}</td>
               <td>{item.qty}</td>
-              <td>${item.price * item.qty}</td>
+              <td>{item.price * item.qty}</td>
             </tr>
           ))}
           <tr>
             <td colSpan="2"><strong>Grand Total:</strong></td>
-            <td><strong>${calculateTotal()}</strong></td>
+            <td><strong>{calculateTotal()}</strong></td>
           </tr>
         </tbody>
       </table>
