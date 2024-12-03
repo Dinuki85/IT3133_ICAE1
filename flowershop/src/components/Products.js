@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Product from './Product';
 import Cart from './Cart';
-import { flowers } from './FlowerDb';
-import '../assets/CSS/layout.css'; 
+import { flowers } from './FlowerDB';
+import '../assets/css/layout.css'; 
 
 export default function Products() {
   const [cartItems, setCartItems] = useState([]);

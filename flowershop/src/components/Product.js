@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/CSS/layout.css'; // Adjust with your CSS file path
+import '../assets/css/layout.css'; 
 
 export default function Product({ flower, addToCart }) {
   const [quantity, setQuantity] = useState('');

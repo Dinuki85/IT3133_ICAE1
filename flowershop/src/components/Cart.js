@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/CSS/layout.css'; 
+import '../assets/css/layout.css'; 
 
 export default function Cart({ cartItems = [] }) {
   const calculateTotal = () => {
