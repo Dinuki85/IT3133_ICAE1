@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import '../assets/css/layout.css';
+import '../assets/CSS/layout.css'; // Adjust with your CSS file path
 
 export default function Product({ flower, addToCart }) {
   const [quantity, setQuantity] = useState('');
 
   const handleAddToCart = () => {
     addToCart(flower, quantity);
-    setQuantity(''); // Reset quantity input
+    setQuantity(''); 
   };
 
   return (
