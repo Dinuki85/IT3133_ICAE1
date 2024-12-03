@@ -1,4 +1,4 @@
-import { flowers } from './FlowerDb';
+import { flowers } from './FlowerDB';
 import { useState } from 'react';
 import Cart from './Cart';
 
