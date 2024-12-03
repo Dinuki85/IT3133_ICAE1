@@ -1,4 +1,4 @@
-export default function Cart({ cartItems }) {
+export default function Cart({ cartItems = [] }) {
     const calculateTotal = () => {
       return cartItems.reduce((total, item) => total + item.price * item.qty, 0);
     };
