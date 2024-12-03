@@ -3,7 +3,8 @@ export default function Cart({cartItems}) {
     useEffect(() => {
         const grandTotal = cartItems.reduce((total, item) => totla + item.price * item.qty, 0);
         setTotalPrice(grandTotal);
-    }, [cartItems])
+    }, [cartItems]);
+
     return (
         <div className="table-container">
             <h4 className="card-title">Cart</h4>
@@ -28,7 +29,7 @@ export default function Cart({cartItems}) {
                 }
                 <tr>
                     <td >Grand Total : </td>
-                    <td colSpan={2}>Grand Total</td>
+                    <td colSpan={2}>${totalPrice}</td>
                 </tr>
                 </tbody>
             </table>
