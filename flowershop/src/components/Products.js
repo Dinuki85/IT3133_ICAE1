@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../assets/CSS/layout.css';
 
 
-export default function Products(){
+export default function Products() {
     const [cartItems, setCartItems] = useState([]);
     const addToCart = (flower, quantity) => {
         const itemIndex = cartItems.findIndex(item => item.id === flower.id);
@@ -16,8 +16,20 @@ export default function Products(){
         }
         setCartItems(updatedCart);
       };
+
+      const handleAddToCart = (flower, inputId) => {
+        const quantity = parseInt(document.getElementById(inputId).value, 10);
+        if (quantity > 0) {
+          addToCart(flower, quantity);
+          document.getElementById(inputId).value = ''; // Clear input after adding
+        } else {
+          alert('Please enter a valid quantity.');
+        }
+      };
+
     return(
         <>
+     
             <div className="item1">
                 <h1>Flower Shop</h1>
             </div>
@@ -46,7 +58,7 @@ export default function Products(){
                 <Cart cartItems={cartItems} />
                 }
             </div>
-        </>
-    );
+            </>
+    )
 
 }
