@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Product from './Product';
 import Cart from './Cart';
-import { flowers } from './FlowerDB';
-import '../assets/css/layout.css';
+import { flowers } from './FlowerDb';
+import '../assets/CSS/layout.css'; 
 
 export default function Products() {
   const [cartItems, setCartItems] = useState([]);
@@ -10,7 +10,7 @@ export default function Products() {
   const addToCart = (product, quantity) => {
     const qty = parseInt(quantity, 10);
     if (!qty || qty <= 0) return;
-    
+
     const existingItem = cartItems.find(item => item.id === product.id);
     if (existingItem) {
       setCartItems(
